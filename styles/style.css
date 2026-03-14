@@ -9,39 +9,43 @@
   background-color: #000028
 }
 
-.page::after {
-  content: '';
-  position: absolute;
-  border-bottom: 1px solid var(--color_text_head_menu_dark);
-  border-left: 1px solid var(--color_text_head_menu_dark);
-  width: 25px;
-  height: 25px;
-  left: 3vw;
-  bottom: 3vw;
-}
-
 .header {
-  block-size: 100vw;
+  inline-size: 100vw;
   min-block-size: 668px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 36px auto auto auto;
+  grid-template-rows: 36px 195px 1fr 1fr;
+  margin-block-end: 40px;
+  padding: 10px;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  border-block-end: 1px solid var(--color_text_head_menu_dark);
+  border-inline-start: 1px solid var(--color_text_head_menu_dark);
+  width: 25px;
+  height: 25px;
+  align-self: end;
+  justify-self: start;
 }
 
 .block_rec {
   position: absolute;
-  left: 81vw;
-  top: 10px;
+  justify-self: end;
+  margin-block-start: 1px;
+  margin-inline-end: 1.4em;
 }
 
-.block_rec::before {
+.header::before {
   content: '';
   position: absolute;
-  border-top: 1px solid var(--color_text_head_menu_dark);
-  border-right: 1px solid var(--color_text_head_menu_dark);
+  border-block-start: 1px solid var(--color_text_head_menu_dark);
+  border-inline-end: 1px solid var(--color_text_head_menu_dark);
   width: 25px;
   height: 25px;
-  left: 35.96px;
+  align-self: start;
+  justify-self: end;
 }
 
 .block_rec::after{
@@ -56,8 +60,8 @@
 }
 
 .rec_decor{
-  font-family: 'IBM Plex mono', sans-serif;
-  font-weight: normal;
+  font-family: var(--IBM_Plex_Mono);
+  font-weight: 400;
   font-size: 18px;
   line-height: 25px;
   color: var(--color_text_head_menu_dark);
@@ -66,14 +70,14 @@
 .header__theme-menu {
   grid-row: 2/3;
   justify-self: end;
-  margin-top: 40.5px;
+  margin-block-start: 31px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 11px;
+  padding-block-end: 11px;
   gap: 15px;
 }
 
@@ -93,40 +97,101 @@
   padding: 3px 13px;
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--color_text_head_menu_dark);
+  border-block-end: 1px solid var(--color_text_head_menu_dark);
   padding: 3px 13px;
 }
 
 .header__theme-menu-button_type_dark {
   border: 1px solid var(--color_text_head_menu_dark);
-  padding: 3px 13px;
+  padding: 3px 14px;
 }
 
 .header_head {
   grid-row: 3/4;
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: var(--IBM_Plex_Mono);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 83%;
   color: #DB00FF;
   text-shadow: 4px 4px 0 var(--accent-color);
-  margin-left: 10px;
-  margin-top: 19px;
 }
+
 .title-decor {
   background-color: #FF0070;
   color: #000028;
 }
+
 .paragraph_header{
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: var(--IBM_Plex_Mono);
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
   grid-row: 4;
   width: 355px;
   height: 117px;
-  margin-left: 2vw;
-  margin-bottom: 14px;
+  margin-block-start: 35px;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100vw;
+  padding-inline: 10px;
+}
+
+.why_difficult_focus {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr 1fr;
+  gap: 20px;
+}
+
+.head_section {
+  font-family: var(--IBM_Plex_Mono);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--color_text_head_menu_dark);
+}
+
+.reduces_concetration_atantion{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.goldfish {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 1fr);
+}
+
+.soviet_weight{
+  font-weight: 400;
+}
+
+.head_card {
+  font-family: var(--IBM_Plex_Mono);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin-block-end: 10px;
+}
+
+.text_card {
+  font-family: var(--IBM_Plex_Mono);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.in_image {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+
+
