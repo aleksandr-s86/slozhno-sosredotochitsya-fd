@@ -6,7 +6,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: #000028
+  background-color: var(--main-bg-color);
 }
 
 .header {
@@ -22,8 +22,8 @@
 .header::after {
   content: '';
   position: absolute;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--decor-corner);
+  border-inline-start: 1px solid var(--decor-corner);
   width: 25px;
   height: 25px;
   align-self: end;
@@ -40,8 +40,8 @@
 .header::before {
   content: '';
   position: absolute;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--decor-corner);
+  border-inline-end: 1px solid var(--decor-corner);
   width: 25px;
   height: 25px;
   align-self: start;
@@ -84,7 +84,7 @@
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
-  color: var(--accent-color);
+  color: var(--menu-color);
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -93,18 +93,18 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--hover-color);
   padding: 3px 13px;
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--tab-color);
   padding: 3px 13px;
 }
 
 .header__theme-menu-button_type_dark {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--menu-color);
   padding: 3px 14px;
 }
 
@@ -114,13 +114,13 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 83%;
-  color: #DB00FF;
+  color: var(--focus-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .title-decor {
   background-color: var(--accent-color);
-  color: #000028;
+  color: var(--title-decor-color);
 }
 
 .paragraph_header {
@@ -154,7 +154,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--accent-color);
+  color: var(--head-section-color);
   padding-inline-end: 24px;
 }
 
@@ -198,6 +198,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
+  color: var(--text-color);
 }
 
 .url {
@@ -347,9 +348,9 @@
   }
 
   .images {
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-template: 1fr auto auto / repeat(3, 1fr);
     gap: 20px;
-    height: 780px;
+    height: 100%;
   }
 
   .image {
@@ -454,5 +455,17 @@
 
   .reduces_concetration_atantion .card:nth-child(4) {
     grid-column: 3/4;
+  }
+
+  .goldfish {
+    grid-template-columns: 335px 1fr;
+  }
+    .footer {
+    min-block-size: 768px;
+  }
+
+  .focus {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-block-start: 8px;
   }
 }
