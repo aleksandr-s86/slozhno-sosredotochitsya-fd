@@ -31,6 +31,7 @@
 }
 
 .block_rec {
+  display: var(--visibility-rec);
   position: absolute;
   justify-self: end;
   margin-block-start: 1px;
@@ -103,9 +104,10 @@
   padding: 3px 13px;
 }
 
-.header__theme-menu-button_type_dark {
+.header__theme-menu-button_active {
   border: 1px solid var(--menu-color);
   padding: 3px 14px;
+  pointer-events: none
 }
 
 .header_head {
@@ -267,7 +269,7 @@
   font-family: var(--IBM_Plex_Mono);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  color: #DB00FF;
+  color: var(--focus-color);
   align-self: center;
   justify-self: center;
   text-shadow: 2px 2px 0 var(--accent-color);

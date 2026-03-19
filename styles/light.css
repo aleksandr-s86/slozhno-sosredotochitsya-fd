@@ -20,4 +20,22 @@
   --hover-color: rgba(50, 49, 45, 0.4);
   --tab-color:rgba(53, 52, 48, 1);
   --head-section-color: #353430;
+  --visibility-rec: none;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --path_bg_image: url(/images/cover-image-light.png);
+    --accent-color: #FF8DCB;
+    --main-bg-color: #FFF1F7;
+    --focus-color: #FFC2E6;
+    --text-color: #353430;
+    --title-decor-color: #353430;
+    --decor-corner: #353430;
+    --menu-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.4);
+    --tab-color:rgba(53, 52, 48, 1);
+    --head-section-color: #353430;
+    --visibility-rec: none;
+  }
+} 
