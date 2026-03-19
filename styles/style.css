@@ -107,7 +107,7 @@
 .header__theme-menu-button_active {
   border: 1px solid var(--menu-color);
   padding: 3px 14px;
-  pointer-events: none
+  pointer-events: none;
 }
 
 .header_head {
