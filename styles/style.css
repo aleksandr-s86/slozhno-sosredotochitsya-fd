@@ -351,6 +351,7 @@
   .in_image {
     grid-template-columns: 3fr;
     grid-template-rows: repeat(4, min-content);
+    margin-block-end: 0;
   }
 
   .in_image .head_card {
@@ -394,17 +395,11 @@
     grid-row: 3/4;
   }
 
-   .in_image {
-    margin-block-end: 0;
-  }
-
   .footer {
     block-size: 100%;
     min-block-size: 1024px;
     padding: 20px;
-}
-
-
+  }
 }
 
 @media (width >= 1024px) {
