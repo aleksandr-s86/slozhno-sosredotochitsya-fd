@@ -4,7 +4,7 @@
 */
 :root {
   --ibm-plex-mono: 'IBM Plex Mono', sans-serif ;
-  --path_bg_image: url(../images/cover-image-dark.png);
+  --path-bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --main-bg-color: #000028;
   --focus-color: #db00ff;
